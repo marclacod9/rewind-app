@@ -352,16 +352,20 @@ html, body,
 
 div[data-testid="column"]:not(:first-child) .stButton > button {
     background: transparent !important;
-    color: var(--text-secondary) !important;
-    border: 1.5px solid var(--border) !important;
+    color: var(--text-muted) !important;
+    border: none !important;
     box-shadow: none !important;
+    font-size: 0.78rem !important;
+    padding: 0.4rem 0.6rem !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
 }
 
 div[data-testid="column"]:not(:first-child) .stButton > button:hover {
-    border-color: var(--text-secondary) !important;
-    background: var(--surface-hover) !important;
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+    border: none !important;
     box-shadow: none !important;
-    color: var(--text) !important;
     transform: none !important;
 }
 
