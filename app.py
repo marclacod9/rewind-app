@@ -16,12 +16,11 @@ st.set_page_config(
 )
 
 # ─────────────────────────────────────────────────────────
-# CLAUDE-STYLE DESIGN SYSTEM
+# DESIGN SYSTEM
 # ─────────────────────────────────────────────────────────
 
 st.markdown("""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Styrene+A+Web:wght@300;400;500&family=Tiempos+Text:ital,wght@0,400;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
 
 :root {
@@ -73,23 +72,14 @@ html, body,
     margin-bottom: 2.5rem;
 }
 
-.masthead-eyebrow {
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.8rem;
-}
-
 .masthead-title {
     font-family: 'Lora', Georgia, serif;
-    font-size: 2.8rem;
+    font-size: 5rem;
     font-weight: 500;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     color: var(--text);
-    line-height: 1.1;
-    margin-bottom: 0.7rem;
+    line-height: 1;
+    margin-bottom: 0.8rem;
 }
 
 .masthead-sub {
@@ -293,14 +283,7 @@ html, body,
     font-size: 0.88rem;
     color: var(--text-secondary);
     line-height: 1.4;
-    transition: all 0.15s;
     cursor: pointer;
-}
-
-.suggestion-chip:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--accent-light);
 }
 
 /* ── Inputs ── */
@@ -312,7 +295,6 @@ html, body,
     border-radius: var(--radius-sm) !important;
     color: var(--text) !important;
     padding: 0.7rem 1rem !important;
-    transition: border-color 0.15s, box-shadow 0.15s !important;
     box-shadow: var(--shadow-sm) !important;
 }
 
@@ -335,7 +317,6 @@ html, body,
     color: var(--text) !important;
     padding: 0.75rem 1rem !important;
     line-height: 1.6 !important;
-    transition: border-color 0.15s, box-shadow 0.15s !important;
     box-shadow: var(--shadow-sm) !important;
 }
 
@@ -361,7 +342,6 @@ html, body,
     padding: 0.55rem 1.3rem !important;
     box-shadow: var(--shadow-sm) !important;
     transition: all 0.15s !important;
-    letter-spacing: 0.01em !important;
 }
 
 .stButton > button:hover {
@@ -370,11 +350,6 @@ html, body,
     transform: translateY(-1px) !important;
 }
 
-.stButton > button:active {
-    transform: translateY(0) !important;
-}
-
-/* Secondary button style for "New video" and "Clear" */
 div[data-testid="column"]:not(:first-child) .stButton > button {
     background: transparent !important;
     color: var(--text-secondary) !important;
@@ -387,6 +362,7 @@ div[data-testid="column"]:not(:first-child) .stButton > button:hover {
     background: var(--surface-hover) !important;
     box-shadow: none !important;
     color: var(--text) !important;
+    transform: none !important;
 }
 
 /* ── Alerts ── */
@@ -396,7 +372,6 @@ div[data-testid="column"]:not(:first-child) .stButton > button:hover {
     border-radius: var(--radius-sm) !important;
     color: var(--text-secondary) !important;
     font-size: 0.85rem !important;
-    font-family: 'DM Sans', sans-serif !important;
 }
 
 /* ── Spinner ── */
@@ -432,7 +407,6 @@ div[data-testid="column"]:not(:first-child) .stButton > button:hover {
     border-radius: 20px;
     padding: 0.35rem 1rem;
     margin-top: 1rem;
-    letter-spacing: 0.03em;
 }
 
 </style>
@@ -571,8 +545,7 @@ with st.sidebar:
 
 st.markdown("""
 <div class="masthead">
-    <div class="masthead-eyebrow">⏮ Rewind</div>
-    <div class="masthead-title">Talk to the guest.</div>
+    <div class="masthead-title">Rewind</div>
     <div class="masthead-sub">Turn any podcast into a conversation — there's always time for one more question.</div>
 </div>
 """, unsafe_allow_html=True)
