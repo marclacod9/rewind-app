@@ -522,22 +522,40 @@ for k, v in defaults.items():
 # ─────────────────────────────────────────────────────────
 
 with st.sidebar:
-    st.markdown("### Rewind")
+    st.markdown("## ⏮ Rewind")
+    st.caption("Turn any podcast into a conversation.")
+    st.markdown("---")
+
     api_key = st.text_input(
         "Nebius Token Factory API Key",
         type="password",
         placeholder="eyJh...",
         help="Get your free key at tokenfactory.nebius.com"
     )
-    st.markdown("---")
-    st.markdown("**Get a free key:**")
-    st.markdown("[tokenfactory.nebius.com](https://tokenfactory.nebius.com)")
-    st.markdown("Sign in with Google → Settings → API Keys")
+    st.markdown("**Get your free API key:**")
+    st.markdown("[tokenfactory.nebius.com →](https://tokenfactory.nebius.com)")
+    st.caption("Sign in with Google → Settings → API Keys")
+
     if st.session_state.total_cost > 0:
         st.markdown("---")
-        st.markdown(f"Session cost: `${st.session_state.total_cost:.5f}`")
+        st.markdown(f"**Session cost:** `${st.session_state.total_cost:.5f}`")
+
     st.markdown("---")
-    st.caption("Powered by DeepSeek R1 on Nebius Token Factory")
+    st.markdown("**Powered by**")
+    st.markdown("[Nebius Token Factory](https://nebius.com/services/token-factory) · DeepSeek R1")
+
+    st.markdown("---")
+    st.caption(
+        "⚠️ **Disclaimer:** Rewind generates AI responses based on YouTube transcripts. "
+        "Responses are not real statements by the speakers and should not be attributed to them. "
+        "For educational and exploratory use only."
+    )
+    st.caption(
+        "Rewind does not store, reproduce, or redistribute video content. "
+        "Transcripts are fetched in real time and processed ephemerally. "
+        "YouTube content remains the property of its respective creators and rights holders."
+    )
+    st.caption("© 2026 Rewind. All rights reserved.")
 
 # ─────────────────────────────────────────────────────────
 # MASTHEAD
