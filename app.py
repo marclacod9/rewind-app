@@ -593,7 +593,7 @@ if not st.session_state.video_loaded:
             transcript, result = get_transcript(url)
 
         if not transcript:
-            st.error("Couldn't get transcript. Make sure the video has captions enabled.")
+            st.error(f"Couldn't get transcript: {result}")
         else:
             video_id = extract_video_id(url)
             with st.spinner("Identifying speaker..."):
