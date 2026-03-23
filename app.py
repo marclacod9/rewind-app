@@ -85,7 +85,7 @@ html, body,
 .masthead-sub {
     font-family: 'DM Sans', sans-serif;
     font-size: 1.05rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--text);
     line-height: 1.5;
 }
